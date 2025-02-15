@@ -1,0 +1,237 @@
+/*
+Theme Name: Coffee Shop
+Theme URI: http://example.com/coffee-shop
+Author: Your Name
+Author URI: http://example.com
+Description: A simple coffee shop theme for WordPress.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: coffee-shop
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.text-brown {
+    color: #8B4513; /* Brown color */
+    transition: text-shadow 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.text-brown:hover {
+    text-shadow: 0px 0px 10px rgba(139, 69, 19, 0.8); /* Glowing effect */
+    color: #6B3D16; /* Darker brown for hover */
+}
+
+.coffee-particle {
+    pointer-events: none;  /* So it doesn’t block clicks behind it */
+    /* Optionally, set a z-index if needed */
+    /* z-index: 9999; */
+  }
+  
+  .navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none; /* Removes default underline */
+    color: white; /* Ensures text remains visible */
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px; /* Adjust thickness */
+    background-color: #8B4513; /* Brown color */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-social {
+    font-size: 1.3rem; /* Adjust icon size */
+    transition: color 0.3s ease-in-out;
+    color: white !important;
+}
+
+.nav-social:hover i {
+    color: #c49a6c; /* Coffee-themed brown */
+}
+
+#social-icons {
+    display: flex;
+    gap: 6px; /* Adjust spacing between icons */
+}
+
+@media (max-width: 991px){
+    #social-icons {
+        display: none !important;
+    }
+}
+
+.feature-img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    display: block !important; /* Ensures proper layout */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+.feature-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c19a6b; /* Coffee brown color */
+    margin-bottom: 5px;
+}
+
+.feature{
+    color: #666;
+}
+
+.btn-shop:hover{
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+/* --- Fix Product Section --- */
+#products {
+    background-color: #f9f5f0; /* Light coffee background */
+}
+
+.btn-more:hover {
+    background-color: #8B4513;
+    border-color: #8B4513;
+}
+
+/* --- Modern Product Card Styling --- */
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0 5px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #8B4513;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* --- Improved Buy Now Button --- */
+.btn-shop {
+    background-color: #6B3D16;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-shop:hover {
+    background-color: #8B4513;
+    transform: scale(1.05);
+}
+
+/* --- Swiper Navigation Buttons --- */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #8B4513 !important;
+    font-size: 24px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #6B3D16 !important;
+}
+
+.swiper-wrapper {
+    height: 450px !important;   
+    margin-top: 50px;
+}
+
+/* Remove blue outline & change background/text color on focus */
+.accordion-button:focus {
+    box-shadow: none !important; /* removes the blue focus ring */
+    outline: none !important;    /* removes the default outline */
+    background-color: #6f4e37 !important; /* set your preferred color */
+    color: #ffffff !important;            /* text color for contrast */
+}
+
+/* Change background/text color when the accordion is expanded */
+.accordion-button:not(.collapsed) {
+    background-color: #6f4e37 !important; /* set your preferred color */
+    color: #ffffff !important;            /* text color for contrast */
+}
+
+/* Optional: Hover effect for the accordion button */
+.accordion-button:hover {
+    background-color: #8c5a3f !important; /* a slightly lighter/darker shade of brown */
+    color: #ffffff !important;
+}
+.accordion-button:after {
+    color: #000000 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.faq-question {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-link:hover {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+.btn-lrn-more:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: white !important;
+}
+
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236f4e37'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+}
+
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236f4e37'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+
+

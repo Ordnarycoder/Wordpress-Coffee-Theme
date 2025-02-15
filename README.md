@@ -35,7 +35,7 @@ Pull requests are welcome! If you find any issues, feel free to submit an **issu
 This theme is open-source. You are free to modify and use it as needed.
 
 ## 💬 Connect with Me
-- 🌐 [Website](eyuptech.com)
+- 🌐 [Website](https://eyuptech.com/)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/ey%C3%BCp-irfan-%C3%A7elik-0652712b8/)
 
 ---
